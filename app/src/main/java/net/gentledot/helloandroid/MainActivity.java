@@ -26,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
         startActivity(intent);
     }
+    public void onButtonScrClicked(View v){
+        Intent intent = new Intent(getApplicationContext(), Scroll.class);
+        startActivity(intent);
+    }
+    public void onButtonFraClicked(View v){
+        Intent intent = new Intent(getApplicationContext(), FrameActivity.class);
+        startActivity(intent);
+    }
 
 
 }
