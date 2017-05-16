@@ -64,4 +64,12 @@
             android:layout_marginTop="15dp"
             android:id="@+id/button15" android:layout_below="@+id/buttonScroll" android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" android:onClick="onButtonInflClicked"/>
+    <Button
+            android:text="메뉴화면 띄우기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goToMenu"
+            android:layout_alignBaseline="@+id/button15" android:layout_alignBottom="@+id/button15"
+            android:layout_alignRight="@+id/button4" android:layout_alignEnd="@+id/button4"
+    android:onClick="onToMenuClicked"/>
 </RelativeLayout>

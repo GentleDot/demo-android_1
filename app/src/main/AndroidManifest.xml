@@ -27,6 +27,10 @@
         </activity>
         <activity android:name=".InflationActivity">
         </activity>
+        <activity android:name=".MenuPageActivity"
+                  android:label="메뉴 액티비티"
+        android:theme="@style/Theme.AppCompat.Dialog">
+        </activity>
     </application>
 
 </manifest>
