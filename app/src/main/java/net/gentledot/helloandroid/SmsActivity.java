@@ -48,28 +48,28 @@ public class SmsActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                byte[] bytes = null;
-                try {
-                    bytes = s.toString().getBytes("UTF-8");
-                    int strCount = bytes.length;
-                    countByte.setText(strCount + " / 80 바이트");
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                String str = s.toString();
-                try {
-                    byte[] strBytes = str.getBytes("UTF-8");
-                    if(strBytes.length > 80){
-                        s.delete(s.length() - 2, s.length() - 1);
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    byte[] bytes = null;
+                    try {
+                        bytes = s.toString().getBytes("UTF-8");
+                        int strCount = bytes.length;
+                        countByte.setText(strCount + " / 80 바이트");
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
                     }
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
                 }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    String str = s.toString();
+                    try {
+                        byte[] strBytes = str.getBytes("UTF-8");
+                        if(strBytes.length > 80){
+                            s.delete(s.length() - 2, s.length() - 1);
+                        }
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
             }
         };
 

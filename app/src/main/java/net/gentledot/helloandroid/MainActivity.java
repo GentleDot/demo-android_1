@@ -38,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), SmsActivity.class);
         startActivity(intent);
     }
+    public void onButtonInflClicked(View v){
+        Intent intent = new Intent(getApplicationContext(), InflationActivity.class);
+        startActivity(intent);
+    }
 
 
 }

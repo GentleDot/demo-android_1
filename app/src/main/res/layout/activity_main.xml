@@ -57,4 +57,11 @@
             android:layout_alignBaseline="@+id/buttonFrame" android:layout_alignBottom="@+id/buttonFrame"
             android:layout_alignLeft="@+id/button4" android:layout_alignStart="@+id/button4"
             android:onClick="onButtonSmsClicked"/>
+    <Button
+            android:text="인플레이션 데모"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/button15" android:layout_below="@+id/buttonScroll" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" android:onClick="onButtonInflClicked"/>
 </RelativeLayout>

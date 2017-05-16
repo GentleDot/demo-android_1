@@ -25,6 +25,8 @@
         </activity>
         <activity android:name=".SmsActivity">
         </activity>
+        <activity android:name=".InflationActivity">
+        </activity>
     </application>
 
 </manifest>
