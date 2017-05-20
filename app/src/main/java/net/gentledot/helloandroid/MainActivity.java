@@ -105,6 +105,11 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, REQUEST_CODE_MENU);
     }
 
+    public void onToSmsReceiver(View v){
+        Intent intent = new Intent(getApplicationContext(), SMSReceiveActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

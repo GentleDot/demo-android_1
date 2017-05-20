@@ -98,4 +98,11 @@
             android:layout_marginTop="24dp"
             android:layout_below="@+id/onParcelButton" android:layout_alignRight="@+id/goToMenu"
             android:layout_alignEnd="@+id/goToMenu"/>
+    <Button
+            android:text="SMS 리시버"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/smsReceiverBtn" android:layout_alignTop="@+id/onParcelButton"
+            android:layout_toRightOf="@+id/serviceTxt" android:layout_toEndOf="@+id/serviceTxt"
+            android:onClick="onToSmsReceiver"/>
 </RelativeLayout>
