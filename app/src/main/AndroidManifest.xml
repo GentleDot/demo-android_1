@@ -27,10 +27,19 @@
         </activity>
         <activity android:name=".InflationActivity">
         </activity>
-        <activity android:name=".MenuPageActivity"
-                  android:label="메뉴 액티비티"
-        android:theme="@style/Theme.AppCompat.Dialog">
+        <activity
+                android:name=".MenuPageActivity"
+                android:label="메뉴 액티비티"
+                android:theme="@style/Theme.AppCompat.Dialog">
         </activity>
+        <activity android:name=".ParcelActivity">
+        </activity>
+
+        <service
+                android:name=".MyService"
+                android:enabled="true"
+                android:exported="true">
+        </service>
     </application>
 
 </manifest>

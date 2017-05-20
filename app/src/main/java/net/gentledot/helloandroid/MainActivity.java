@@ -5,15 +5,58 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
-    public static final int REQUEST_CODE_MENU = 101;
+    private static final int REQUEST_CODE_MENU = 101;
+    private static final int PARCEL_CODE_MENU = 201;
+
+    EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button parcelButton = (Button) findViewById(R.id.onParcelButton);
+        parcelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ParcelActivity.class);
+
+                ArrayList names = new ArrayList<String>();
+                names.add("hong");
+                names.add("song");
+
+                intent.putExtra("names", names);
+
+                SimpleData data = new SimpleData(100, "Hello");
+                intent.putExtra("data", data);
+
+                startActivityForResult(intent, PARCEL_CODE_MENU);
+            }
+        });
+
+        editText = (EditText) findViewById(R.id.serviceTxt);
+
+        Button svcBtn = (Button) findViewById(R.id.serviceBtn);
+        svcBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = editText.getText().toString();
+
+                Intent serviceIntent = new Intent(getApplicationContext(), MyService.class);
+                serviceIntent.putExtra("command", "show");
+                serviceIntent.putExtra("name", name);
+
+                startService(serviceIntent);
+            }
+        });
     }
 
     public void onButton1Clicked(View view){
@@ -63,4 +106,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
+
 }
