@@ -43,6 +43,23 @@ public class MyService extends Service {
        String name = intent.getStringExtra("name");
 
        Log.d(TAG, "전달받은 데이터 : " + command + ", " + name);
+
+//        for (int i = 0; i < 5; i++) {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+//            Log.d(TAG, i + "초 대기.");
+//        }
+
+        Intent showIntent = new Intent(getApplicationContext(), MainActivity.class);
+        showIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|
+                            Intent.FLAG_ACTIVITY_SINGLE_TOP|
+                            Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        showIntent.putExtra("command", "show");
+        showIntent.putExtra("name", name + " from service.");
+        startActivity(showIntent);
     }
 
     @Override

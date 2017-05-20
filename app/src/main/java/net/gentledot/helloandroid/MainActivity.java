@@ -57,6 +57,18 @@ public class MainActivity extends AppCompatActivity {
                 startService(serviceIntent);
             }
         });
+
+        Intent passedIntent = getIntent();
+        processIntent(passedIntent);
+    }
+
+    private void processIntent(Intent intent) {
+        if(intent != null){
+            String command = intent.getStringExtra("command");
+            String name = intent.getStringExtra("name");
+
+            Toast.makeText(this, "서비스로부터 전달받은 데이터 : " + command + ", " + name, Toast.LENGTH_LONG).show();
+        }
     }
 
     public void onButton1Clicked(View view){
@@ -107,6 +119,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        processIntent(intent);
 
-
+        super.onNewIntent(intent);
+    }
 }
