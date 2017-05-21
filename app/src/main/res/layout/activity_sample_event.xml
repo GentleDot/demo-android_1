@@ -27,7 +27,7 @@
             android:background="#ff00ff44"/>
 
         <EditText android:layout_width="match_parent" android:layout_height="60dp"
-            android:id="@+id/editText1"
+            android:id="@+id/editText01"
             android:hint="텍스트를 입력하세요."
             android:textSize="20dp"
                   android:background="@drawable/my_selector"
