@@ -36,4 +36,12 @@ public class FragmentActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void onFragmentChange(int index){
+        if(index == 0){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragFrame, fragmentMain).commit();
+        } else if(index == 1) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragFrame, fragmentMenu).commit();
+        }
+    }
 }
