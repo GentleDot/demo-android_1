@@ -100,6 +100,15 @@ public class MainActivity extends AppCompatActivity {
                 showMessage();
             }
         });
+
+        Button progressBtn = (Button) findViewById(R.id.progressBtn);
+        progressBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ProgressActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void showMessage() {
