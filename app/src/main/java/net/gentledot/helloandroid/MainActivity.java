@@ -127,6 +127,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Button fragBtn = (Button) findViewById(R.id.fragmentBtn);
+        fragBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), FragmentActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void showMessage() {
