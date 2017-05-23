@@ -25,6 +25,8 @@
         </activity>
         <activity android:name=".SimpleAnimation">
         </activity>
+        <activity android:name=".PageSliding">
+        </activity>
     </application>
 
 </manifest>

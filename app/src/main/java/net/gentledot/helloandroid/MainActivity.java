@@ -118,6 +118,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Button pageSlidingBtn = (Button) findViewById(R.id.slidingBtn);
+        pageSlidingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), PageSliding.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void showMessage() {
