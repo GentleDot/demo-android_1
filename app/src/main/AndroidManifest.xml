@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".FragmentActivity">
         </activity>
+        <activity android:name=".ImageViewer">
+        </activity>
     </application>
 
 </manifest>

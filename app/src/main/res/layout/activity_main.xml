@@ -93,4 +93,11 @@
             android:id="@+id/fragmentBtn" android:layout_marginStart="16dp"
             app:layout_constraintLeft_toLeftOf="parent" android:layout_marginLeft="16dp"
             app:layout_constraintBottom_toTopOf="@+id/progressBtn" android:layout_marginBottom="8dp"/>
+    <Button
+            android:text="이미지뷰어"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewerBtn" android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/fragmentBtn" android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/simpleAniBtn" android:layout_marginBottom="8dp"/>
 </android.support.constraint.ConstraintLayout>

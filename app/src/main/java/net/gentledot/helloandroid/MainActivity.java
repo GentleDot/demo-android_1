@@ -136,6 +136,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Button imageViewerBtn = (Button) findViewById(R.id.imageViewerBtn);
+        imageViewerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ImageViewer.class));
+            }
+        });
     }
 
     private void showMessage() {
