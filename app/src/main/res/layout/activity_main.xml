@@ -65,4 +65,13 @@
         <TextView android:id="@+id/dialogText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="버튼을 누르면 대화상자가 뜹니다."/>
         <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/dialogButton" android:text="띄우기" android:layout_gravity="center_horizontal"/>
     </LinearLayout>
+    <Button
+            android:text="간단한 애니메이션"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/simpleAniBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/progressBtn" android:layout_marginLeft="16dp"/>
 </android.support.constraint.ConstraintLayout>

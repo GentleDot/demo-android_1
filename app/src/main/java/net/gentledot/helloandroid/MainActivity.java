@@ -109,6 +109,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Button simpleAniBtn = (Button) findViewById(R.id.simpleAniBtn);
+        simpleAniBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), SimpleAnimation.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void showMessage() {
