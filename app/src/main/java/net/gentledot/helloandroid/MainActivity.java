@@ -144,6 +144,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), ImageViewer.class));
             }
         });
+
+        Button optionMenuBtn = (Button) findViewById(R.id.optionMenuBtn);
+        optionMenuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), OptionMenu.class));
+            }
+        });
     }
 
     private void showMessage() {

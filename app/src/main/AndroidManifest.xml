@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".ImageViewer">
         </activity>
+        <activity android:name=".OptionMenu">
+        </activity>
     </application>
 
 </manifest>

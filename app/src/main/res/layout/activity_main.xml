@@ -100,4 +100,12 @@
             android:id="@+id/imageViewerBtn" android:layout_marginStart="8dp"
             app:layout_constraintLeft_toRightOf="@+id/fragmentBtn" android:layout_marginLeft="8dp"
             app:layout_constraintBottom_toTopOf="@+id/simpleAniBtn" android:layout_marginBottom="8dp"/>
+    <Button
+            android:text="옵션 메뉴"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/optionMenuBtn"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/imageViewerBtn" android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/simpleAniBtn" android:layout_marginBottom="8dp"/>
 </android.support.constraint.ConstraintLayout>
