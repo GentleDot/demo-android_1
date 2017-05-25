@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="net.gentledot.helloandroid.WebViewActivity">
+
+    <Button
+            android:text="열기"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/turnOnWebBtn"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_x="29dp" android:layout_y="-6dp" android:id="@+id/urlInput"
+        android:textSize="20sp"
+        android:padding="4dp"/>
+    <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        android:id="@+id/webViewArea">
+    </WebView>
+</LinearLayout>

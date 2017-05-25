@@ -160,6 +160,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), TabPage.class));
             }
         });
+
+        Button webViewBtn = (Button) findViewById(R.id.webViewBtn);
+        webViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), WebViewActivity.class));
+            }
+        });
     }
 
     private void showMessage() {

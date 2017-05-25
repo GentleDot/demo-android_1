@@ -90,9 +90,9 @@
             android:text="프래그먼트"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fragmentBtn" android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent" android:layout_marginLeft="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/progressBtn" android:layout_marginBottom="8dp"/>
+            android:id="@+id/fragmentBtn" android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/progressBtn"/>
     <Button
             android:text="이미지뷰어"
             android:layout_width="wrap_content"
@@ -116,4 +116,13 @@
             android:layout_marginStart="8dp"
             app:layout_constraintLeft_toRightOf="@+id/optionMenuBtn" android:layout_marginLeft="8dp"
             app:layout_constraintBottom_toTopOf="@+id/slidingBtn" android:layout_marginBottom="8dp"/>
+    <Button
+            android:text="웹뷰 위젯"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/webViewBtn"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp" app:layout_constraintBottom_toTopOf="@+id/fragmentBtn"
+            android:layout_marginBottom="8dp"/>
 </android.support.constraint.ConstraintLayout>
