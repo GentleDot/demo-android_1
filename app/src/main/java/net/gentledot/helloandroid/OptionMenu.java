@@ -69,7 +69,7 @@ public class OptionMenu extends AppCompatActivity {
                 // 검색 메소드 호출
                 search();
 
-                // 키패드 닫기기
+                // 키패드 닫기
                InputMethodManager inputManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
                 inputManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
             }

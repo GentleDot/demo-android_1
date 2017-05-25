@@ -152,6 +152,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), OptionMenu.class));
             }
         });
+
+        Button tabPageBtn = (Button) findViewById(R.id.tabPageBtn);
+        tabPageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), TabPage.class));
+            }
+        });
     }
 
     private void showMessage() {

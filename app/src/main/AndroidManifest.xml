@@ -33,6 +33,8 @@
         </activity>
         <activity android:name=".OptionMenu">
         </activity>
+        <activity android:name=".TabPage">
+        </activity>
     </application>
 
 </manifest>
