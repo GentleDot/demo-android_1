@@ -168,6 +168,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), WebViewActivity.class));
             }
         });
+
+        Button bitmapBtn = (Button) findViewById(R.id.bitmapBtn);
+        bitmapBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), BitmapBtnActivity.class));
+            }
+        });
     }
 
     private void showMessage() {
