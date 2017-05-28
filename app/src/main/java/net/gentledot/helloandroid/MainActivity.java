@@ -176,6 +176,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), BitmapBtnActivity.class));
             }
         });
+
+        Button listViewBtn = (Button) findViewById(R.id.listViewBtn1);
+        listViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ListViewActivity.class));
+            }
+        });
     }
 
     private void showMessage() {
