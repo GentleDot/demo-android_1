@@ -184,6 +184,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), ListViewActivity.class));
             }
         });
+
+        Button spinnerBtn = (Button) findViewById(R.id.spinnerBtn);
+        spinnerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), SpinnerActivity.class));
+            }
+        });
+
+        Button gridViewBtn = (Button) findViewById(R.id.gridViewBtn);
+        gridViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), GridActivity.class));
+            }
+        });
     }
 
     private void showMessage() {
