@@ -200,6 +200,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), GridActivity.class));
             }
         });
+
+        Button dateTimePickBtn = (Button) findViewById(R.id.dateTimePickBtn);
+        dateTimePickBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), DateTimePickerActivity.class));
+            }
+        });
     }
 
     private void showMessage() {

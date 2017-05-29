@@ -161,4 +161,12 @@
             app:layout_constraintBottom_toTopOf="@+id/webViewBtn" android:layout_marginBottom="8dp"
             android:layout_marginStart="16dp" app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginLeft="16dp"/>
+    <Button
+            android:text="복합위젯"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateTimePickBtn"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/gridViewBtn" android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/bitmapBtn" android:layout_marginBottom="8dp"/>
 </android.support.constraint.ConstraintLayout>

@@ -47,6 +47,8 @@
         </activity>
         <activity android:name=".GridActivity">
         </activity>
+        <activity android:name=".DateTimePickerActivity">
+        </activity>
     </application>
 
 </manifest>
