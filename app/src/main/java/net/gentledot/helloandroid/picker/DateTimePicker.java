@@ -1,4 +1,4 @@
-package picker;
+package net.gentledot.helloandroid.picker;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,7 +8,6 @@ import android.widget.*;
 import net.gentledot.helloandroid.R;
 
 import java.util.Calendar;
-import java.util.Date;
 
 /**
  * Created by Sang on 2017-05-29.

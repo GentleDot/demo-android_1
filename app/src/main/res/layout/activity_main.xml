@@ -169,4 +169,12 @@
             android:layout_marginStart="8dp"
             app:layout_constraintLeft_toRightOf="@+id/gridViewBtn" android:layout_marginLeft="8dp"
             app:layout_constraintBottom_toTopOf="@+id/bitmapBtn" android:layout_marginBottom="8dp"/>
+    <Button
+            android:text="달력"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarBtn"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/dateTimePickBtn" android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/listViewBtn1" android:layout_marginBottom="8dp"/>
 </android.support.constraint.ConstraintLayout>

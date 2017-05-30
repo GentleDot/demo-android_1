@@ -3,8 +3,8 @@ package net.gentledot.helloandroid;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-import picker.DateTimePicker;
-import picker.OnDateTimeChangeListener;
+import net.gentledot.helloandroid.picker.DateTimePicker;
+import net.gentledot.helloandroid.picker.OnDateTimeChangeListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

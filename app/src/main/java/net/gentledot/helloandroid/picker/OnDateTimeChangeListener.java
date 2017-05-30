@@ -1,4 +1,4 @@
-package picker;
+package net.gentledot.helloandroid.picker;
 
 /**
  * Created by Sang on 2017-05-29.

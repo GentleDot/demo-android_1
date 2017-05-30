@@ -13,11 +13,11 @@
               android:layout_gravity="center_horizontal"/>
 
     <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
-        <picker.DateTimePicker android:layout_width="match_parent"
-                               android:layout_height="wrap_content"
-                               android:id="@+id/picker"
-                               android:layout_marginTop="10dp">
+        <net.gentledot.helloandroid.picker.DateTimePicker android:layout_width="match_parent"
+                                                          android:layout_height="wrap_content"
+                                                          android:id="@+id/picker"
+                                                          android:layout_marginTop="10dp">
 
-        </picker.DateTimePicker>
+        </net.gentledot.helloandroid.picker.DateTimePicker>
     </ScrollView>
 </LinearLayout>
