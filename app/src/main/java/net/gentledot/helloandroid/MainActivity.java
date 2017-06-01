@@ -216,6 +216,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), CalendarActivity.class));
             }
         });
+
+        Button multiTouchBtn = (Button) findViewById(R.id.multiTouchBtn);
+        multiTouchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MultiTouchActivity.class));
+            }
+        });
     }
 
     private void showMessage() {

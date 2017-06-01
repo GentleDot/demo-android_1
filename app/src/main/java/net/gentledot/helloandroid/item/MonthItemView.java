@@ -29,6 +29,7 @@ public class MonthItemView extends RelativeLayout {
         inflater.inflate(R.layout.month_item, this, true);
 
         monthText = (TextView) findViewById(R.id.monthText);
+        monthText.setBackgroundColor(Color.WHITE);
     }
 
     public void setDay(int day, int index){
