@@ -20,5 +20,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), DrawRectangleActivity.class));
             }
         });
+
+        Button drawableBtn = (Button) findViewById(R.id.drawableVarBtn);
+        drawableBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), DrawablesActivity.class));
+            }
+        });
     }
 }

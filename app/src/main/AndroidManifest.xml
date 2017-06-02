@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".DrawRectangleActivity">
         </activity>
+        <activity android:name=".DrawablesActivity">
+        </activity>
     </application>
 
 </manifest>
