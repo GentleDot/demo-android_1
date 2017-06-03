@@ -19,6 +19,10 @@
         </activity>
         <activity android:name=".DrawablesActivity">
         </activity>
+        <activity android:name=".BitmapActivity">
+        </activity>
+        <activity android:name=".PaintBoardActivity">
+        </activity>
     </application>
 
 </manifest>

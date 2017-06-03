@@ -28,5 +28,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), DrawablesActivity.class));
             }
         });
+
+        Button bitmapDemoBtn = (Button) findViewById(R.id.bitmapDemoBtn);
+        bitmapDemoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), BitmapActivity.class));
+            }
+        });
+
+        Button paintBoardBtn = (Button) findViewById(R.id.paintBoardBtn);
+        paintBoardBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PaintBoardActivity.class));
+            }
+        });
     }
 }

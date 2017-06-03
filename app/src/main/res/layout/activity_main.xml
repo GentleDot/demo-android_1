@@ -11,7 +11,7 @@
             android:text="사각형"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/drawBtn" android:layout_marginTop="8dp"
+            android:id="@+id/drawBtn" android:layout_marginTop="8dp" android:layout_marginLeft="8dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -20,4 +20,16 @@
         app:layout_constraintTop_toTopOf="parent" app:layout_constraintLeft_toRightOf="@+id/drawBtn"
         android:layout_marginTop="8dp"
         android:text="drawable"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:id="@+id/bitmapDemoBtn"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintLeft_toRightOf="@+id/drawableVarBtn"
+        android:layout_marginTop="8dp"
+        android:text="비트맵"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:id="@+id/paintBoardBtn"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintLeft_toRightOf="@+id/bitmapDemoBtn"
+        android:text="페인트보드"
+        android:layout_marginTop="8dp"/>
 </android.support.constraint.ConstraintLayout>
