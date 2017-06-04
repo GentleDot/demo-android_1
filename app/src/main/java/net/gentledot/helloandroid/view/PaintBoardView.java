@@ -78,6 +78,14 @@ public class PaintBoardView extends View{
         return true;
     }
 
+    public void setColor(int color){
+        paint.setColor(color);
+    }
+
+    public void setLineWidth(float lineWidth){
+        paint.setStrokeWidth(lineWidth);
+    }
+
     private void init(Context context) {
         paint = new Paint();
         paint.setColor(Color.BLACK);

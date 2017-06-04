@@ -7,6 +7,14 @@
         android:layout_height="match_parent"
         tools:context="net.gentledot.helloandroid.PaintBoardActivity">
 
-    <net.gentledot.helloandroid.view.PaintBoardView android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/setColorBtn"
+            android:layout_alignParentTop="true"
+            android:text="색상 선택"
+    />
+
+    <net.gentledot.helloandroid.view.PaintBoardView android:layout_width="match_parent" android:layout_height="match_parent"
+        android:id="@+id/paintArea"
+        android:layout_below="@+id/setColorBtn"/>
 
 </RelativeLayout>

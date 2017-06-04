@@ -23,6 +23,10 @@
         </activity>
         <activity android:name=".PaintBoardActivity">
         </activity>
+        <activity android:name=".ColorDialogActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"
+            android:label="색상 선택">
+        </activity>
     </application>
 
 </manifest>
