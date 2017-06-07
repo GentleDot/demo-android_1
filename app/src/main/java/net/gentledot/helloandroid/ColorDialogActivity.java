@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import net.gentledot.helloandroid.listeners.OnColorSelectedListener;
 import net.gentledot.helloandroid.view.ColorItemView;
 
 import java.lang.reflect.Array;
@@ -20,6 +21,8 @@ public class ColorDialogActivity extends AppCompatActivity {
 
     GridView gridView;
     ColorAdapter colorAdapter;
+
+    public static OnColorSelectedListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

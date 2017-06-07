@@ -7,14 +7,33 @@
         android:layout_height="match_parent"
         tools:context="net.gentledot.helloandroid.PaintBoardActivity">
 
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:id="@+id/setColorBtn"
-            android:layout_alignParentTop="true"
-            android:text="색상 선택"
-    />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:id="@+id/paintBoardMenuArea"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:gravity="center_horizontal">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:id="@+id/setColorBtn"
+                android:drawableTop="@drawable/colorpalette" android:drawablePadding="2dp"
+                android:text="색상 선택"
+        />
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/setPenBtn"
+            android:drawableTop="@drawable/penpalette" android:drawablePadding="2dp"
+            android:text="펜 선택"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/eraserBtn"
+            android:drawableTop="@drawable/eraser" android:drawablePadding="2dp"
+            android:text="지우기"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/undoBtn"
+            android:drawableTop="@drawable/undo" android:drawablePadding="2dp"
+            android:text="되돌리기"/>
+    </LinearLayout>
+
 
     <net.gentledot.helloandroid.view.PaintBoardView android:layout_width="match_parent" android:layout_height="match_parent"
         android:id="@+id/paintArea"
-        android:layout_below="@+id/setColorBtn"/>
+        android:layout_below="@+id/paintBoardMenuArea"/>
 
 </RelativeLayout>
