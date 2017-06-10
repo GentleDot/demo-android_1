@@ -94,7 +94,7 @@ public class PaintBoardView extends View{
                 prevX = -1;
                 prevY = -1;
 
-                break;  
+                break;
             default:
                 break;
 

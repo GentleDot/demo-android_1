@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_pen_palette_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="net.gentledot.helloandroid.PenPaletteDialogActivity">
+    <GridView android:layout_width="match_parent" android:layout_height="match_parent"
+        android:id="@+id/penGridView"
+        android:layout_weight=".8"
+        android:layout_margin="10dp">
+
+    </GridView>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:id="@+id/penCloseBtn"
+        android:layout_gravity="center_horizontal"
+        android:text="닫기"
+        android:layout_weight=".2"
+        android:background="#FFFF" android:textColor="#F000"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>
