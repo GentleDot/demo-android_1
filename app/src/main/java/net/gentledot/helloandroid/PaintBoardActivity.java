@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import net.gentledot.helloandroid.listeners.OnColorSelectedListener;
 import net.gentledot.helloandroid.listeners.OnPenSelectedListener;
 import net.gentledot.helloandroid.view.PaintBoardView;
@@ -18,6 +21,10 @@ public class PaintBoardActivity extends AppCompatActivity {
     Button penSettingBtn;
     Button eraserBtn;
     Button undoBtn;
+    Button curColorInfo;
+    TextView curSizeInfo;
+
+    LinearLayout infoArea;
 
     int oldColor = 0;
     int oldSize = 0;
@@ -38,13 +45,13 @@ public class PaintBoardActivity extends AppCompatActivity {
         colorSettingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ColorDialogActivity.listener = new OnColorSelectedListener() {
+                /*ColorDialogActivity.listener = new OnColorSelectedListener() {
                     @Override
                     public void onColorSelected(int color) {
-                        mColor = color;
-                        board.updatePaintProperty(mColor, mSize);
+                        *//*mColor = color;
+                        board.updatePaintProperty(mColor, mSize);*//*
                     }
-                };
+                };*/
 
                 Intent intent = new Intent(getApplicationContext(), ColorDialogActivity.class);
                 startActivityForResult(intent, REQUEST_CODE_COLOR);
@@ -60,6 +67,8 @@ public class PaintBoardActivity extends AppCompatActivity {
                     public void onPenSelected(int penSize) {
                         mSize = penSize;
                         board.updatePaintProperty(mColor, mSize);
+                        displayPaintInfo();
+                        Log.d("currentPenSize", "penSize : " + mSize);
                     }
                 };
 
@@ -89,6 +98,7 @@ public class PaintBoardActivity extends AppCompatActivity {
                     mSize = mSize * 2;
 
                     board.updatePaintProperty(mColor, mSize);
+                    displayPaintInfo();
                 } else {
                     colorSettingBtn.setEnabled(true);
                     penSettingBtn.setEnabled(true);
@@ -102,6 +112,7 @@ public class PaintBoardActivity extends AppCompatActivity {
                     mSize = oldSize;
 
                     board.updatePaintProperty(mColor, mSize);
+                    displayPaintInfo();
                 }
             }
         });
@@ -113,6 +124,17 @@ public class PaintBoardActivity extends AppCompatActivity {
                 board.undo();
             }
         });
+
+        infoArea = (LinearLayout) findViewById(R.id.showPaintInfoArea);
+
+        curColorInfo = (Button) findViewById(R.id.curColorShowBtn);
+        curColorInfo.setText(" ");
+        curColorInfo.setBackgroundColor(mColor);
+
+        curSizeInfo = (TextView) findViewById(R.id.curSizeShowText);
+        curSizeInfo.setText("Size : " + mSize);
+        curSizeInfo.setTextSize(10.0F);
+        curSizeInfo.setTextColor(Color.BLACK);
     }
 
     @Override
@@ -122,7 +144,10 @@ public class PaintBoardActivity extends AppCompatActivity {
         if(requestCode == REQUEST_CODE_COLOR){
             if(data != null){
                 int color = data.getIntExtra("color", 0);
-                board.setColor(color);
+                mColor = color;
+                board.setColor(mColor);
+                displayPaintInfo();
+                Log.d("currentColor", "color : " + mColor);
             }
         }
     }
@@ -134,5 +159,14 @@ public class PaintBoardActivity extends AppCompatActivity {
     public int getPenThickness(){
         return mSize;
     }
+
+    private void displayPaintInfo() {
+        curColorInfo.setBackgroundColor(mColor);
+        curSizeInfo.setText("Size : " + mSize);
+
+        infoArea.invalidate();
+    }
+
+
 
 }

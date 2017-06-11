@@ -16,20 +16,36 @@
                 android:id="@+id/setColorBtn"
                 android:drawableTop="@drawable/colorpalette" android:drawablePadding="2dp"
                 android:text="색상 선택"
+                android:layout_weight="1"
         />
         <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:id="@+id/setPenBtn"
             android:drawableTop="@drawable/penpalette" android:drawablePadding="2dp"
-            android:text="펜 선택"/>
+            android:text="펜 선택"
+                android:layout_weight="1"/>
         <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:id="@+id/eraserBtn"
             android:drawableTop="@drawable/eraser" android:drawablePadding="2dp"
-            android:text="지우기"/>
+            android:text="지우기"
+            android:layout_weight="1"/>
         <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:id="@+id/undoBtn"
             android:drawableTop="@drawable/undo" android:drawablePadding="2dp"
-            android:text="되돌리기"/>
+            android:text="되돌리기"
+            android:layout_weight="1"/>
+        <LinearLayout android:layout_width="30dp" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/showPaintInfoArea"
+            android:layout_marginTop="6dp" android:layout_marginLeft="2dp">
+            <Button android:layout_width="wrap_content" android:layout_height="20dp"
+                    android:id="@+id/curColorShowBtn"
+            />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/curSizeShowText"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
     </LinearLayout>
+
 
 
     <net.gentledot.helloandroid.view.PaintBoardView android:layout_width="match_parent" android:layout_height="match_parent"
