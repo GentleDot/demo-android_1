@@ -44,5 +44,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), PaintBoardActivity.class));
             }
         });
+
+        Button surfaceViewBtn = (Button) findViewById(R.id.surfaceViewBtn);
+        surfaceViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PaintBoardSurfaceActivity.class));
+            }
+        });
     }
 }

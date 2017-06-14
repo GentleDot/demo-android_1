@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/drawBtn" android:layout_marginTop="8dp" android:layout_marginLeft="8dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+            app:layout_constraintLeft_toLeftOf="parent" android:layout_marginStart="8dp"/>
 
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:id="@+id/drawableVarBtn"
@@ -32,4 +32,13 @@
         app:layout_constraintTop_toTopOf="parent" app:layout_constraintLeft_toRightOf="@+id/bitmapDemoBtn"
         android:text="페인트보드"
         android:layout_marginTop="8dp"/>
+    <Button
+            android:text="서피스 뷰"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/surfaceViewBtn"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/drawBtn"/>
 </android.support.constraint.ConstraintLayout>
