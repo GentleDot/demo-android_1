@@ -52,5 +52,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), PaintBoardSurfaceActivity.class));
             }
         });
+
+        Button coverFlowBtn = (Button) findViewById(R.id.coverFlowBtn);
+        coverFlowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), CoverFlowActivity.class));
+            }
+        });
     }
 }

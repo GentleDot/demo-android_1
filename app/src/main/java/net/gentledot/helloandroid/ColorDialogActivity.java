@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import net.gentledot.helloandroid.gallery.CoverFlow;
 import net.gentledot.helloandroid.listeners.OnColorSelectedListener;
 import net.gentledot.helloandroid.view.ColorItemView;
 
@@ -48,7 +49,6 @@ public class ColorDialogActivity extends AppCompatActivity {
                Intent intent = new Intent(getApplicationContext(), PaintBoardActivity.class);
                intent.putExtra("color", selectedColor);
                setResult(Activity.RESULT_OK, intent);
-
                finish();
            }
        });
