@@ -64,7 +64,8 @@ public class CoverFlow extends Gallery { // 갤러리 클래스를 확장해 커
     }
 
     @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) { // 뷰가 화면에 보이기 전에 중앙점 좌표 확인
+        centerPoint = getCenterOfCoverflow();
         super.onSizeChanged(w, h, oldw, oldh);
     }
 
@@ -73,10 +74,10 @@ public class CoverFlow extends Gallery { // 갤러리 클래스를 확장해 커
         this.setStaticTransformationsEnabled(true);
     }
 
-
     private int getCenterOfView(View view) {
         return view.getLeft() + view.getWidth() / 2;
     }
+
 
     private void transformImageBitmap(ImageView child, Transformation t, int rotationAngle) {
         camera.save();
@@ -100,5 +101,9 @@ public class CoverFlow extends Gallery { // 갤러리 클래스를 확장해 커
         imageMatrix.postTranslate((imageWidth/2), (imageHeight/2));
 
         camera.restore();
+    }
+
+    private int getCenterOfCoverflow() { // 중앙점 좌표 계산
+        return (getWidth() - getPaddingLeft() - getPaddingRight()) / 2 + getPaddingLeft();
     }
 }
